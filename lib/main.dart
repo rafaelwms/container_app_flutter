@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.blueGrey,
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               CircleAvatar(
                 radius: 50.0,
@@ -35,56 +36,49 @@ class MyApp extends StatelessWidget {
                     letterSpacing: 2.5,
                     fontWeight: FontWeight.normal),
               ),
-              Container(
-                padding: EdgeInsets.all(10.0),
-                color: Colors.white,
-                margin: EdgeInsets.symmetric(
-                  vertical: 10.0,
-                  horizontal: 25.0,
-                ),
-                child: Row(
-                  children: <Widget>[
-                    Icon(
-                      Icons.phone,
-                      size: 25.0,
-                      color: Colors.blueGrey,
-                    ),
-                    SizedBox(
-                      width: 10.0,
-                    ),
-                    Text(
-                      '+55 81 999252751',
-                      style: TextStyle(
-                        fontFamily: 'Source Sans Pro',
-                      ),
-                    ),
-                  ],
+              SizedBox(
+                height: 20.0,
+                width: 150.0,
+                child: Divider(
+                  color: Colors.white,
                 ),
               ),
-              Container(
-                padding: EdgeInsets.all(10.0),
-                color: Colors.white,
+              Card(
                 margin: EdgeInsets.symmetric(
                   vertical: 10.0,
                   horizontal: 25.0,
                 ),
-                child: Row(
-                  children: <Widget>[
-                    Icon(
-                      Icons.email,
-                      size: 25.0,
-                      color: Colors.blueGrey,
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    size: 25.0,
+                    color: Colors.blueGrey,
+                  ),
+                  title: Text(
+                    '+55 81 999252751',
+                    style: TextStyle(
+                      fontFamily: 'Source Sans Pro',
                     ),
-                    SizedBox(
-                      width: 10.0,
+                  ),
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(
+                  vertical: 10.0,
+                  horizontal: 25.0,
+                ),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    size: 25.0,
+                    color: Colors.blueGrey,
+                  ),
+                  title: Text(
+                    'rafael.wms@msn.com',
+                    style: TextStyle(
+                      fontFamily: 'Source Sans Pro',
                     ),
-                    Text(
-                      'rafael.wms@msn.com',
-                      style: TextStyle(
-                        fontFamily: 'Source Sans Pro',
-                      ),
-                    ),
-                  ],
+                  ),
                 ),
               ),
             ],
