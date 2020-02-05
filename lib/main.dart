@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -8,35 +9,31 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.teal,
+        backgroundColor: Colors.blueGrey,
         body: SafeArea(
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          child: Column(
             children: <Widget>[
-              Container(
-                color: Colors.red,
-                width: 100.0,
+              CircleAvatar(
+                radius: 50.0,
+                backgroundColor: Colors.white,
+                backgroundImage: AssetImage('images/rafael.png'),
               ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
-                  Container(
-                    color: Colors.yellow,
-                    width: 100.0,
-                    height: 100.0,
-                  ),
-                  Container(
-                    color: Colors.green,
-                    width: 100.0,
-                    height: 100.0,
-                  ),
-                ],
+              Text(
+                'Rafael WMS',
+                style: TextStyle(
+                    fontFamily: 'Source Sans Pro',
+                    fontSize: 18.0,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold),
               ),
-              Container(
-                color: Colors.blue,
-                width: 100.00,
+              Text(
+                'SOFTWARE ENGINEER',
+                style: TextStyle(
+                    fontFamily: 'Source Sans Pro',
+                    fontSize: 14.0,
+                    color: Colors.white,
+                    letterSpacing: 2.5,
+                    fontWeight: FontWeight.normal),
               ),
             ],
           ),
